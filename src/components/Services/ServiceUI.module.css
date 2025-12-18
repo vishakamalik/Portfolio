@@ -1,0 +1,143 @@
+/* Container for the whole section */
+.services {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  /* Changed fixed margin to responsive padding */
+  padding: 50px 10%; 
+  margin: 0 auto;
+  max-width: 1400px;
+}
+
+/* Title Styling */
+.services_title {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.services_title h1 {
+  padding: 0px;
+  font-size: 80px;
+  font-weight: 700;
+  /* Fallback color if gradient fails */
+  color: #fff; 
+}
+
+.services_title img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  opacity: 0.8;
+}
+
+/* Grid Layout for Cards - Fully Responsive */
+.services_container {
+  display: grid;
+  /* Auto-fit creates as many columns as fit, min 320px wide */
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+  width: 100%;
+}
+
+/* Individual Card Styling */
+.services_format {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px;
+  border-radius: 15px;
+  /* Glass/Dark border effect */
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  background: rgba(25, 25, 25, 0.4); 
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Card Number */
+.services_format h3 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #fff;
+}
+
+/* Card Title with Gradient */
+.services_format h2 {
+  font-size: 32px;
+  font-weight: 800;
+  background: linear-gradient(270deg, #df8908 0%, #b415ff 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 5px;
+}
+
+/* Description Text */
+.services_format p {
+  color: #d4d4d4;
+  font-size: 18px;
+  line-height: 1.6; /* Better readability */
+  max-width: 100%;
+}
+
+/* Read More Section */
+.services_readmore {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 10px;
+  transition: gap 0.3s ease;
+}
+
+.services_readmore p {
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  margin: 0;
+}
+
+/* Hover Effects */
+.services_format:hover {
+  /* Lift effect */
+  transform: translateY(-10px);
+  /* Gradient border simulation using background */
+  border: 2px solid #b415ff;
+  background: linear-gradient(45deg, #1f0014, #2a1100);
+  /* Glow effect */
+  box-shadow: 0 10px 30px rgba(180, 21, 255, 0.2);
+}
+
+/* Move arrow and color text on hover */
+.services_format:hover .services_readmore img {
+  transform: translateX(5px);
+  transition: transform 0.3s ease;
+}
+
+.services_format:hover .services_readmore p {
+  color: #df8908; 
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .services {
+    padding: 60px 5%;
+    gap: 40px;
+  }
+  
+  .services_title h1 {
+    font-size: 50px;
+  }
+  
+  .services_format {
+    padding: 30px;
+  }
+
+  .services_format h2 {
+    font-size: 28px;
+  }
+}

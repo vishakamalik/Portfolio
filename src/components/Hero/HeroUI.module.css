@@ -1,0 +1,133 @@
+.hero {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 35px;
+  margin-top: 50px;
+  animation: fadeIn 1s ease-in;
+}
+
+.avatar_logo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 20px rgba(180, 21, 255, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.avatar_logo:hover {
+  transform: scale(1.05);
+}
+
+.hero_heading {
+  text-align: center;
+  width: 80%;
+  font-size: 65px;
+  font-weight: 700;
+  line-height: 1.1;
+  animation: slideUp 0.8s ease-out;
+}
+
+.name {
+  background: linear-gradient(270deg, #df8908 10%, #b415ff 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subheading {
+  width: 60%;
+  text-align: center;
+  font-size: 22px;
+  line-height: 35px;
+  color: #d8d8d8;
+  animation: slideUp 1s ease-out;
+}
+
+.hero_action {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 50px;
+  animation: slideUp 1.2s ease-out;
+}
+
+.hero_connect {
+  padding: 20px 40px;
+  border-radius: 50px;
+  background: linear-gradient(264deg, #df8908 -5.09%, #b415ff 106.9%);
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.hero_connect:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(180, 21, 255, 0.5);
+}
+
+.hero_resume {
+  padding: 20px 40px;
+  border-radius: 50px;
+  border: 2px solid #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.hero_resume:hover {
+  border-color: #b415ff;
+  color: #b415ff;
+  background: rgba(255, 255, 255, 0.05);
+}
+.anchor_link{
+  text-decoration: none;
+  color:white;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    margin-top: 50px;
+    gap: 25px;
+    padding: 0 20px;
+  }
+
+  .avatar_logo {
+    width: 120px;
+    height: 120px;
+  }
+
+  .hero_heading {
+    width: 100%;
+    font-size: 40px;
+  }
+
+  .subheading {
+    width: 100%;
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .hero_action {
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+  }
+
+  .hero_connect, .hero_resume {
+    width: 100%;
+    text-align: center;
+    padding: 18px 0;
+  }
+}

@@ -1,0 +1,104 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin: 80px 170px; /* Aligns with your other sections */
+    font-family: 'Outfit', sans-serif;
+}
+
+/* --- Bottom Section --- */
+.footer_bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    color: #d4d4d4;
+}
+
+.footer_bottom_right {
+    display: flex;
+    gap: 50px;
+}
+
+.footer_bottom_right p {
+    cursor: pointer;
+    transition: 0.3s;
+    position: relative;
+}
+
+/* Hover underline effect for bottom links */
+.footer_bottom_right p:hover {
+    color: white;
+}
+
+.footer_bottom_right p::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: #DA7C25; /* Theme Orange */
+    transition: width 0.3s;
+}
+
+.footer_bottom_right p:hover::after {
+    width: 100%;
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 1024px) {
+    .footer {
+        margin: 50px 60px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        margin: 50px 20px; /* Reduce margins */
+        gap: 40px;
+    }
+
+    .footer_top {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .footer_top_left {
+        max-width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer_top_right {
+        flex-direction: column; /* Stack input and button */
+        width: 100%;
+        gap: 20px;
+    }
+
+    .footer_email_input {
+        width: 100%;
+        box-sizing: border-box; /* Ensure padding doesn't overflow */
+    }
+    
+    .footer_email_input input {
+        width: 100%;
+    }
+
+    .footer_subscribe {
+        width: 100%;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    .footer_bottom {
+        flex-direction: column-reverse; /* Put links above copyright on mobile */
+        gap: 25px;
+        text-align: center;
+    }
+
+    .footer_bottom_right {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
