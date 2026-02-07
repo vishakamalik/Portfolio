@@ -15,7 +15,7 @@ const Hero = () => {
     <div id="home" className={styles.hero}>
       <img className={styles.avatar_logo} src={my_img} alt="hero" />
       <h1 className={styles.hero_heading}>
-        <span className={styles.name}>I'm Vishaka Malik,</span> Full Stack
+        <span className={styles.name}>I'm Vishaka Malik,</span> Software
         Developer
       </h1>
       <p className={styles.subheading}>
