@@ -1,24 +1,25 @@
-import React, { useState, useRef } from "react";
+// import React, { useState, useRef } from "react";
+import React, { useRef } from "react";
 import styles from "./NavBar.module.css";
 import me_img from "../../assets/me.png";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 
 const Navbar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  // const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuRef = useRef(null);
 
   const openMenu = () => {
     if (menuRef.current) {
       menuRef.current.style.display = "block";
       menuRef.current.style.right = "0";
-      setIsMenuOpen(true);
+      // setIsMenuOpen(true);
     }
   };
 
   const closeMenu = () => {
     if (menuRef.current) {
       menuRef.current.style.display = "none";
-      setIsMenuOpen(false);
+      // setIsMenuOpen(false);
     }
   };
 

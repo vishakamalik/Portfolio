@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./ServiceUI.module.css";
 import theme_pattern from "../../assets/theme_pattern.svg";
-import arrow_icon from "../../assets/arrow_icon.svg";
+// import arrow_icon from "../../assets/arrow_icon.svg";
 import Services_Data from "../../assets/services_data";
 
 const Services = () => {
