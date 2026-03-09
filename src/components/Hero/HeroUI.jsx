@@ -6,7 +6,7 @@ import AnchorLink from "react-anchor-link-smooth-scroll";
 const Hero = () => {
   const resumeDownload = () => {
     const link = document.createElement("a");
-    link.href = "/vishaka_resume.pdf";
+    link.href = "/vishaka_sde_resume.pdf";
     link.download = "Vishaka Malik Resume.pdf";
     link.click();
   };
